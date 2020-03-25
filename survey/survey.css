@@ -1,0 +1,142 @@
+body{
+    background-image: url(4.jpg);
+    background-size: cover;
+    background-position: center;
+  
+}
+h1{
+    font-size: 50px;
+}
+.head{
+      text-align: center;
+    color: white;
+}
+.parent{
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+    opacity: 90px;
+    display: block;
+}
+input[type=text], select, textarea{
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    resize: vertical;
+}
+input[type=tel]{
+    width: 40%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    resize: vertical;
+}
+.hot2{
+    float: left;
+    width: 25%;
+    padding: 20px;
+}
+
+.hot3{
+    float: left;
+    width: 75%;
+    margin-top: 6PX;
+}
+.hot:after{
+    content: "";
+    display: table;
+    clear: both;
+}
+@media screen  and (max-width: 600px){
+    .hot2, .hot3, input[type=submit]{
+        width: 100%;
+        margin-top: 0;
+    }
+}
+.parent2{
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.parent2 input{
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+.checkmark{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #eee;
+    border-radius: 50%;
+}
+.parent2 :hover input ~ .checkmark{
+    background-color: #ccc;
+}
+.parent2 input:checked~.checkmark{
+    background-color: #2196f3;
+}
+.checkmark:after{
+    content: "";
+    position: absolute;
+    display: none;
+}
+.parent2 input:checked~.checkmark:after{
+
+    display: block;
+}
+.parent2 .checkmark:after{
+    left: 9px;
+    top: 9px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: white;
+}
+button{
+    background-color: transparent;
+    border:1px solid white;
+    margin-top: 20px;
+    padding: 10px 10px;
+    color: white;
+    text-decoration: none;
+    font-family: sans-serif;
+    font-size: 20px;
+    box-sizing: border-box;
+    border-radius: 30px;
+    background: linear-gradient(90deg, BLUE, GREY, rgb(186, 186, 204), BLUE);
+    background-size: 400%;
+}
+button:hover{
+    animation: animate 8s linear infinite;
+    }
+    @keyframes animate
+    {
+
+        0%
+        {
+            background-position: 0%;
+        }
+        100%
+        {
+            background-position: 400%;
+        }
+}
+footer{
+    background-color: grey;
+    margin-top: 10px;
+    font-size: 20px;
+    color: white;
+    text-align: center;
+}
